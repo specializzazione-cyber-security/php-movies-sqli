@@ -1,0 +1,3 @@
+- Change DB info in db_connection.php
+- Launch php -S localhost:8000
+- Enjoy
