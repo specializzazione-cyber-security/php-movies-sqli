@@ -11,7 +11,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $password = $_POST["password"];
     
     // Construct the query (without escaping)
-    $query = "SELECT * FROM users WHERE email = 'emauil@gsg.com' AND password = '" . sha1($password) . "'";
+    $query = "SELECT * FROM users WHERE email = '$email' AND password = '" . sha1($password) . "'";
 
     // Execute the query
     $result = $conn->query($query);

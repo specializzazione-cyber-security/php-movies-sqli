@@ -2,47 +2,48 @@
 session_start();
 require_once('db_connection.php');
 
+// UNSECURE 
+
 if (isset($_GET['search'])) {
     $searchTerm = $_GET['search'];
-    // Prepare the statement
     $sql = "SELECT * FROM movies WHERE title LIKE '%$searchTerm%'";
-    $stmt = $conn->prepare($sql);
-    
-    // Bind the parameter and execute the statement
-    // $searchTerm = '%' . $searchTerm . '%';
-    // $stmt->bind_param("s", $searchTerm);
 } else {
     $sql = "SELECT * FROM movies";
-    $stmt = $conn->prepare($sql);
 }
 
 try {
-    $stmt->execute();
-    // Get the result
-    $result = $stmt->get_result();
+    $result = mysqli_query($conn, $sql);
 } catch (\Throwable $th) {
     //throw $th;
-    //die("Error: " . mysqli_error($conn));
+    die("Error: " . mysqli_error($conn));
     $error = "Error: " . mysqli_error($conn);
 }
 
-
 // if (isset($_GET['search'])) {
 //     $searchTerm = $_GET['search'];
-//     $sql = "SELECT * FROM movies WHERE title LIKE '%$searchTerm%'";
-//     var_dump($sql);
+//     // Prepare the statement
+//     $sql = "SELECT * FROM movies WHERE title LIKE ?";
+//     $stmt = $conn->prepare($sql);
+    
+//     // Bind the parameter and execute the statement
+//     $searchTerm = '%' . $searchTerm . '%';
+
+//     $stmt->bind_param("s",$searchTerm);
 // } else {
 //     $sql = "SELECT * FROM movies";
+//     $stmt = $conn->prepare($sql);
 // }
 
 // try {
-//     $result = mysqli_query($conn, $sql);
-//     var_dump($result);
+//     $stmt->execute();
+//     // Get the result
+//     $result = $stmt->get_result();
 // } catch (\Throwable $th) {
 //     //throw $th;
-//     die("Error: " . mysqli_error($conn));
+//     //die("Error: " . mysqli_error($conn));
 //     $error = "Error: " . mysqli_error($conn);
 // }
+
 ?>
 <!DOCTYPE html>
 <html>

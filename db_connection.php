@@ -1,7 +1,7 @@
 <?php
 // Parametri di connessione al database
 $servername = "localhost";
-$username = "testVuln";
+$username = "root";
 $password = "toor";
 $dbname = "sqliclub";
 
