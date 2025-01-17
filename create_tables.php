@@ -15,7 +15,7 @@ if ($conn->query($sql_users) === TRUE) {
 
     // Inserimento dei dati di esempio nella tabella "users" con prepared statement
     $users_data = [
-        ['Nicola Milella','nicola.milella@aulab.es','7c222fb2927d828af22f592134e8932480637c0d'], // 12345678
+        ['Mario Rossi','mario.rossi@aulab.it','7c222fb2927d828af22f592134e8932480637c0d'], // 12345678
         ['John Doe', 'john@example.com', '5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8'], // password
         ['Ciro Esposito', 'ciresp@example.com', '9d0d544ec710b5e84b8b7a7326830f3433a6c0cb'],
         ['Michael Johnson', 'michael@example.com', '5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8'],// password

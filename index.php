@@ -14,7 +14,6 @@ if (isset($_GET['search'])) {
 try {
     $result = mysqli_query($conn, $sql);
 } catch (\Throwable $th) {
-    //throw $th;
     die("Error: " . mysqli_error($conn));
     $error = "Error: " . mysqli_error($conn);
 }

@@ -1,9 +1,9 @@
 <?php
 // Parametri di connessione al database
 $servername = "localhost";
-$username = "root";
-$password = "toor";
-$dbname = "sqliclub";
+$username = "YOUR-USERNAME";
+$password = "YOUR-PASSWORD";
+$dbname = "sqlitest";
 
 // Connessione al database
 $conn = new mysqli($servername, $username, $password);

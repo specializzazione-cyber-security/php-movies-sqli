@@ -27,11 +27,7 @@
                     <a class="nav-link" href="login_insecure.php">Login ☠️</a>
                 </li>
                 <?php } ?>
-                <li class="nav-item">
-                <a class="nav-link disabled">Disabled</a>
-                </li>
             </ul>
-            
                 <button id="btnerr" class="btn btn-outline-success" type="submit">Toggle Query Info</button>
             
             </div>
